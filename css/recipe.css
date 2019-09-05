@@ -1,0 +1,10 @@
+#recipes div{
+  margin: 10px 0;
+  text-decoration: none;
+  border: 2px solid black;
+}
+
+#recipes div h4, h6{
+  padding: 10px 10px 0 10px;
+
+}
