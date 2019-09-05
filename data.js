@@ -8,7 +8,7 @@ let data = [
       {
         id: '55065a1e-a14b-4998-88a5-acd52f58b6dc',
         text: 'Rice',
-        completed: false
+        completed: true
       },
       {
         id: '326851a9-55e5-4d4b-8ae8-a25f85ed0cdc',
@@ -49,7 +49,7 @@ let data = [
       {
         id: '8fc4he49-dc3f-41fb-8dca-d8e629520458',
         text: 'beans',
-        completed: true
+        completed: false
       }
     ]
   }
