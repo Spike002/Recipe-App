@@ -18,6 +18,7 @@ const renderRecipes = function(recipes, filters){
 }
 
 renderRecipes(recipes, filters)
+
 // Search recipe from input
 document.querySelector('#search-recipe').addEventListener('input', function (e){
   filters.searchText = e.target.value;
@@ -34,27 +35,6 @@ document.querySelector('#btn-create-recipe').addEventListener('click', function 
     instruction: '',
     ingredients: []
   })
-  //renderRecipes(recipes, filters)
   saveRecipe(recipes)
   location.assign(`/edit.html#${id}`)
 })
-
-
-// Set up submit recipe button
-// document.querySelector('#submit-recipe').addEventListener('submit', function(e){
-//   e.preventDefault()
-//   const id = uuidv4();
-//   recipes.push({
-//     id: id,
-//     title: e.target.elements.titleRecipe.value,
-//     message: 'Click Here to add ingredients',
-//     instruction: '',
-//     ingredients: [{
-//
-//     }]
-//   })
-//
-//   document.querySelector('#submit-recipe').style.display = "none";
-//   renderRecipes(recipes, filters)
-//   console.log(recipes);
-// })

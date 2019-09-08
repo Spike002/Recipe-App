@@ -1,5 +1,4 @@
 let recipes = getSavedRecipe()
-
 const recipeId = location.hash.substring(1)
 
 let recipe = recipes.find(function(recipe){
@@ -25,6 +24,7 @@ const removeIngredient = function (id){
 // Get the DOM Ingredients elements
 const generateIngredientsDOM = function (ingredient){
   const ingredientEl = document.createElement('div')
+  const ingredientDiv = document.createElement('div')
   const checkbox = document.createElement('input')
   const ingredientText = document.createElement('span')
   const removeButton = document.createElement('button')
@@ -32,23 +32,28 @@ const generateIngredientsDOM = function (ingredient){
   // Setup ingredient checkbox
   checkbox.setAttribute('type', 'checkbox')
   checkbox.checked = ingredient.completed
-  ingredientEl.appendChild(checkbox)
+  checkbox.classList.add('input-Checkbox')
+  ingredientDiv.appendChild(checkbox)
 
   checkbox.addEventListener('change', function (){
     toggleIngredient(ingredient.id)
     saveRecipe(recipes)
     renderIngredient(recipe.ingredients)
-    //console.log(`text: ${ingredient.text} status: ${ingredient.completed}`);
 
   })
 
-  // Setup the todo text
+  // Setup the ingredient text
   ingredientText.textContent = ingredient.text
-  ingredientEl.appendChild(ingredientText)
+  ingredientDiv.classList.add('ingredient')
+  ingredientDiv.appendChild(ingredientText)
+  ingredientEl.appendChild(ingredientDiv)
 
   // Setup the remove button
   removeButton.textContent = 'remove'
+  removeButton.classList.add('btn-remove-ingredient')
   ingredientEl.appendChild(removeButton)
+  ingredientEl.classList.add('list-ingredient')
+
   removeButton.addEventListener('click', function (){
     removeIngredient(ingredient.id)
     saveRecipe(recipes)
@@ -66,7 +71,7 @@ const renderIngredient = function(ingredient){
   })
 }
 
-// Toggle the completed value for a given todo
+// Toggle the completed value for a given ingredient
 const toggleIngredient = function (id) {
 
   const ingredient = recipe.ingredients.find (function (ingredient){
@@ -82,7 +87,6 @@ const toggleIngredient = function (id) {
 
 //Message completed all Ingredients
 const completedIngredients = function (){
-  //const completedIngredient = [];
   let count = 0;
   let message = '';
   recipe.ingredients.forEach(function(element){
@@ -103,7 +107,7 @@ const completedIngredients = function (){
   saveRecipe(recipes)
 }
 
-// Remove todo
+// Remove Recipe
 const removeRecipe = function (id){
   const recipeIndex = recipes.findIndex(function (recipe){
     return recipe.id === id

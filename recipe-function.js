@@ -25,6 +25,7 @@ const generateRecipeDom = function (recipe){
     titleEl.textContent = `Unname Recipe`
   }else{
       titleEl.textContent = `${recipe.title}`
+
   }
 
   messageEl.textContent = `${recipe.message}`
@@ -32,12 +33,13 @@ const generateRecipeDom = function (recipe){
   linkEl.appendChild(recipeEl)
   linkEl.appendChild(titleEl)
   linkEl.appendChild(messageEl)
+  linkEl.classList.add('list-item')
 
 
   recipeEl.addEventListener('click', function (){
       location.assign('/edit.html')
   })
-  linkEl.setAttribute('href', `/edit.html#${recipe.id}`)
 
+  linkEl.setAttribute('href', `/edit.html#${recipe.id}`)
   return linkEl
 }

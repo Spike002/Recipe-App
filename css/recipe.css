@@ -1,10 +1,216 @@
-#recipes div{
-  margin: 10px 0;
-  text-decoration: none;
-  border: 2px solid black;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#recipes div h4, h6{
-  padding: 10px 10px 0 10px;
+html {
+  font-size: 80%;
+}
 
+body {
+  color: #333333;
+  font-family: sans-serif;
+  font-size: 1.7rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+    color: #396684;
+}
+
+/* Container */
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+/* Header */
+
+.header {
+  background: #09A0A8;
+  color: white;
+  padding: 1.6rem 0;
+}
+
+.header__title {
+  font-size: 3.2rem;
+  margin-bottom: .4rem;
+}
+
+/* Actions Bar */
+
+.actions {
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #dedfe0;
+    padding: .8rem
+}
+
+.actions__container {
+    align-items: center;
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    min-height: 3rem;
+    padding: 0 1.6rem;
+}
+
+.input {
+    border: 1px solid #DEDFE0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: .8rem;
+    padding: .4rem .8rem;
+}
+
+.home-link{
+  background-color: #DEDFE0;
+  font-size: 1.8rem;
+  font-weight: 300;
+  /* height: 4rem; */
+  padding: .4rem .8rem;
+}
+
+.home-link a {
+    text-decoration: none;
+}
+.home-link a:hover {
+    font-weight: bold;
+}
+
+.button-create-recipe {
+    background: #1CC30B;
+    border-radius: .3rem;
+    width: 12rem;
+    margin-left: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease;
+}
+
+.button-create-recipe:hover {
+    background: #0D5D05;
+}
+
+.btn-add-ingredient {
+    background: #43799c;
+    border-radius: .3rem;
+    width: 9rem;
+    margin-left: 2rem;
+    border-bottom: 2px solid #396684;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease;
+}
+
+.btn-add-ingredient:hover {
+    background: #396684;
+}
+
+.btn-remove-Recipe{
+  background:  #C70039;
+  border-radius: .3rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: .8rem;
+  margin: 2rem 0;
+  transition: background .3s ease;
+}
+
+.btn-remove-Recipe:hover{
+  border: 2px solid #C70039;
+  color: #C70039;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background:  none;
+}
+
+/* Note editor */
+.title-input {
+    border: 2px solid #DEDFE0;
+    border-radius: .5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    display: block;
+    margin: 2.4rem 0;
+    padding: .8rem;
+    width: 100%;
+}
+
+.ingredient-input{
+  border: 2px solid #DEDFE0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-radius: .5rem;
+  margin: 2.4rem 0;
+  padding: .8rem;
+  width: 50%;
+}
+
+.instruction-input {
+    border: 2px solid #DEDFE0;
+    border-radius: .5rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 300;
+    display: block;
+    margin: 2.4rem 0;
+    min-height: 12rem;
+    padding: .8rem;
+    width: 100%;
+}
+
+/* Note List Item */
+.list-item {
+    text-decoration: none;
+    color: #333333;
+    background: #F7F7F7;
+    border: 1px solid #dedfe0;
+    margin: 1.6rem 0;
+    padding: 1.6rem;
+    display: block;
+    transition: background .3s ease;
+}
+
+.list-item:hover {
+    background: #eeeeee;
+}
+
+h3{
+  font-size: 2rem;
+  margin: 2rem auto;
+}
+
+.list-ingredient{
+  margin: 1rem 0;
+}
+
+.input-Checkbox{
+  margin-right: .5rem;
+}
+
+.ingredient {
+  width: 50%;
+  display: inline-block;
+}
+
+.btn-remove-ingredient{
+  background:  #DA8414;
+  border-radius: .3rem;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: .4rem .8rem;
+  transition: background .3s ease;
 }

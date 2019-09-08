@@ -9,12 +9,7 @@ instructionElement.value = recipe.instruction;
 
 
 titleElement.addEventListener('input', function (e){
-  if(e.target.value == null){
-    recipe.title = `Unname Recipe`
-  }else {
-    recipe.title = e.target.value;
-  }
-
+  recipe.title = e.target.value;
   saveRecipe(recipes)
 })
 
