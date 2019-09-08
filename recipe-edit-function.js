@@ -57,6 +57,7 @@ const generateIngredientsDOM = function (ingredient){
   removeButton.addEventListener('click', function (){
     removeIngredient(ingredient.id)
     saveRecipe(recipes)
+    completedIngredients();
     renderIngredient(recipe.ingredients)
   })
   return ingredientEl
